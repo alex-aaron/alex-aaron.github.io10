@@ -53,33 +53,20 @@ function makeContactList() {
         addContact: function(contact) {
             return contacts.push(contact);
         },
+        /*
+        I: fullName represents a string
+        O: Function should return 
+        C:
+        E:
+        */
         findContact: function(fullName) {
-            var nameSearch = fullName.split(' ');
-
-            for (var i = 0; i < contacts.length; i++) {
-
-                if (nameSearch[0] === contacts[i].nameFirst && nameSearch[1].nameLast) {
-                    return contacts[i]
-                } else {
-                    return undefined;
-                }
-            }
+            // 
         },
         removeContact: function(contact) {
-            for (var i = 0; i < contacts.length; i++) {
-                if (contacts[i] === contact) {
-                    // delete contact;
-                }
-                return contacts;
-            }
+            
         },
         printAllContactNames() {
-            for (var i = 0; i < contacts.length; i++) {
-                var contactBreak = ' ${contacts[i]} \n';
-                console.log(contactBreak);  
-            }
 
-        
         }
     }
 }
