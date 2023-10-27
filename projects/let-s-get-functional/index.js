@@ -3,7 +3,7 @@
 'use strict';
 
 var customers = require('./data/customers.json');
-var _ = require('underbar'); // underbar library
+var _ = require('underbar'); // required underbar library
 
 /**
  * 1. Import your lodown module using the require() method,
@@ -22,8 +22,12 @@ var _ = require('underbar'); // underbar library
  */
 
 var maleCount = function(array) {
+    let males = _.filter(array, function(customer){
+        return customer.gender === 'male';
+    });
 
-};
+    return males.length;
+}; // returns the number of male customers
 
 var femaleCount;
 

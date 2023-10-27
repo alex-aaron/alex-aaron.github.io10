@@ -353,21 +353,23 @@ _.every = function(collection, func){
 */
 
 _.reduce = function(array, func, seed){ // <==
-    let result;
-    // determine if the seed value doesn't exist
-    if (seed === undefined){ 
-      result = array[0]; // first item in array is assigned to result
+    let output;
+    // determine if no seed
+    if (seed === undefined){
+      output = array[0]; // set the zero index item in the array as the seed
       for (let i = 1; i < array.length; i++){
-        result = func(result, array[i], i); // what is going on here?
+        output = func(output, array[i], i);
       }
-    } else { // else it does
-      result = seed;
+    } else { // else there is a seed
+      output = seed; 
       for (let i = 0; i < array.length; i++){
-        result = func(result, array[i], i); // what is going on here?
+        output = func(output, array[i], i);
       }
     }
-    return result;
+  
+    return output;
   }
+
 
 
 /** _.extend // equivalent of Object.assign()
@@ -385,7 +387,7 @@ _.reduce = function(array, func, seed){ // <==
 *   _.extend(data, {a:"two"}); -> data now equals {a:"two"}
 */
 
-_.extend = function(target, ...objects){
+_.extend = function(target, ...objects){ // ...objects => [{}, {}, {}]
 
 }
 
