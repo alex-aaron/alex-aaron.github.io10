@@ -29,7 +29,9 @@ var maleCount = function(array) {
     return males.length;
 }; // returns the number of male customers
 
-var femaleCount;
+var femaleCount = function(){
+    // code
+};
 
 var oldestCustomer;
 
